@@ -14,9 +14,12 @@ echo '<h1> Hello World test </h1>';
 try {
     //Create a S3Client
     $s3Client = new S3Client([
-        'profile' => 'default',
         'region' => 'eu-west-3',
-        'version' => '2006-03-01'
+        'version' => '2006-03-01',
+        'credentials' => [
+            'key' => $_ENV["AWS_ACCESS_KEY_ID"],
+            'secret'  => $_ENV["AWS_SECRET_ACCESS_KEY"],
+        ],
     ]);
 
     echo "<h3>Successful connection</h3>";
