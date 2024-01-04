@@ -27,10 +27,6 @@ try {
             'region' => 'eu-central-1',
             'version' => '2006-03-01',
             'credentials' => CredentialProvider::env()
-//            'credentials' => [
-//                'key' => getenv("AWS_ACCESS_KEY_ID"),
-//                'secret'  => getenv("AWS_SECRET_ACCESS_KEY"),
-//            ],
         ]);
     }
 
